@@ -16,6 +16,5 @@ Für das Mini Projekt wird ein Score Counter erstellt, der folgende Features bei
 | Verwendung von Kotlin                  | 3         |
 | Funktionalität (pro Funktion / Screen) | 1-5       |
 | Persistenz / Offlinefähigkeit          | 1-3       |
-| Ressourcen: Unterschiedliche Layouts   | 1-3       |
 | Ressourcen: Unterschiedliche Styles    | 1-2       |
-| **Total** (7 benötigt)                 | 7-16      |
+| **Total** (7 benötigt)                 | 6-13      |
