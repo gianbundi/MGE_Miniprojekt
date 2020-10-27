@@ -163,13 +163,12 @@ class ListFragment : Fragment() {
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
-        val item = menu!!.findItem(R.id.menu_darkmode)
+        val item = menu.findItem(R.id.menu_darkmode)
         if (darkModeCurrent) {
             item.title = "Light Mode"
         } else {
             item.title = "Dark Mode"
         }
-
         return super.onPrepareOptionsMenu(menu)
     }
 
