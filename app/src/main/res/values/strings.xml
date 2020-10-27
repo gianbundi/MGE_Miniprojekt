@@ -8,8 +8,8 @@
     <string name="save">Save</string>
     <string name="delete">Delete</string>
     <string name="my_name">my_name</string>
-    <string name="minusbtn">minusbtn</string>
-    <string name="plusbtn">plusbtn</string>
+    <string name="minusbtn">-</string>
+    <string name="plusbtn">+</string>
     <string name="value500">500</string>
     <string name="dark_mode">dark_mode</string>
     <string name="sync_header">Header </string>
