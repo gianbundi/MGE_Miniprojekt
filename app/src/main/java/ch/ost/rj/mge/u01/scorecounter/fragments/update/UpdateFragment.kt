@@ -1,7 +1,6 @@
 package ch.ost.rj.mge.u01.scorecounter.fragments.update
 
 import android.app.AlertDialog
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -15,7 +14,6 @@ import ch.ost.rj.mge.u01.scorecounter.fragments.data.models.PlayerData
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.viewmodel.PlayerViewModel
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
-import kotlinx.android.synthetic.main.row_layout.view.*
 
 class UpdateFragment : Fragment() {
 
@@ -51,16 +49,18 @@ class UpdateFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun updateItem() {
+    fun updateItem() {
         val name = current_playerName_edit.text.toString()
         val getColor = current_color_spinner.selectedItem.toString()
+        val getScore = args.currentItem.score
 
         val validation = mSharedViewModel.verifyDataFromUser(name)
         if(validation) {
             val updatedItem = PlayerData(
                 args.currentItem.id,
                 name,
-                mSharedViewModel.parseColor(getColor)
+                mSharedViewModel.parseColor(getColor),
+                getScore
             )
             mPlayerViewModel.updateData(updatedItem)
             Toast.makeText(requireContext(), "Successfully updated!", Toast.LENGTH_SHORT).show()

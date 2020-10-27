@@ -16,10 +16,6 @@ interface PlayerDao {
     @Update
     suspend fun updateData(playerData: PlayerData)
 
-    @Update
-    suspend fun incScore(playerData: PlayerData)
-
-    @Update fun decScore(playerData: PlayerData)
 
     @Delete
     suspend fun deleteItem(playerData: PlayerData)

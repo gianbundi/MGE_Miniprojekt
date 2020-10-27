@@ -34,18 +34,6 @@ class PlayerViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun incScore(playerData: PlayerData) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.incScore(playerData)
-        }
-    }
-
-    fun decScore(playerData: PlayerData) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.decScore(playerData)
-        }
-    }
-
     fun deleteItem(playerData: PlayerData) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteItem(playerData)

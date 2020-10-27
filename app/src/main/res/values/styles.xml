@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="colorOnPrimary">?colorOnPrimary</item>
+        <item name="colorPrimaryVariant">?colorPrimaryVariant</item>
+
+        <item name="colorSecondary">?colorSecondary</item>
+        <item name="colorOnSecondary">?colorOnSecondary</item>
+        <item name="colorSecondaryVariant">?colorSecondaryVariant</item>
+
+        <item name="colorOnBackground">?colorOnBackground</item>
+        <item name="strokeColor">?strokeColor</item>
+
+        <item name="textColorPrimary">@color/black</item>
+        <item name="textColorSecondary">?textColorSecondary</item>
+        <item name="textblack">@color/black</item>
+
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColorTitle" format="color" />
+    <attr name="textColorDescription" format="color" />
+    <attr name="textColorPrimary" format="color" />
+    <attr name="textblack" format="color" />
+    <attr name="textColorSecondary" format="color" />
+
+    <attr name="colorOnPrimary" format="color" />
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorPrimaryVariant" format="color" />
+
+    <attr name="colorSecondary" format="color" />
+    <attr name="colorOnSecondary" format="color" />
+    <attr name="colorSecondaryVariant" format="color" />
+
+    <attr name="colorOnBackground" format="color" />
+    <attr name="strokeColor" format="color" />
+</resources>

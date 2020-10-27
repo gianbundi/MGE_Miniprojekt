@@ -1,30 +1,36 @@
 package ch.ost.rj.mge.u01.scorecounter.fragments.list.adapter
 
+import android.app.Application
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import ch.ost.rj.mge.u01.scorecounter.MainActivity
 import ch.ost.rj.mge.u01.scorecounter.R
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.models.Color
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.models.PlayerData
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.viewmodel.PlayerViewModel
+import ch.ost.rj.mge.u01.scorecounter.fragments.list.ListFragment
 import ch.ost.rj.mge.u01.scorecounter.fragments.list.ListFragmentDirections
+import ch.ost.rj.mge.u01.scorecounter.fragments.update.UpdateFragment
+import kotlinx.android.synthetic.main.fragment_add.view.*
 import kotlinx.android.synthetic.main.row_layout.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     var dataList = emptyList<PlayerData>()
-
-    private lateinit var mPlayerViewModel: PlayerViewModel
-
+    private lateinit var playerViewModel: PlayerViewModel
+    lateinit var inflater: LayoutInflater
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        inflater = LayoutInflater.from(parent.context)
         return MyViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.row_layout, parent, false)
         )
@@ -38,18 +44,21 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
                 ListFragmentDirections.actionListFragmentToUpdateFragment(dataList[position])
             holder.itemView.findNavController().navigate(action)
         }
+        holder.itemView.color_indicator.setOnClickListener {
+            val action =
+                ListFragmentDirections.actionListFragmentToUpdateFragment(dataList[position])
+            holder.itemView.findNavController().navigate(action)
+        }
 
         val color = dataList[position].color
 
-        //mPlayerViewModel = ViewModelProvider(this).get(PlayerViewModel::class.java)
-
         holder.itemView.minus_button.setOnClickListener {
-            decScore(position)
+            dataList[position].score -= 1
             holder.itemView.score.text = dataList[position].score.toString()
         }
 
         holder.itemView.add_button.setOnClickListener {
-            incScore(position)
+            dataList[position].score += 1
             holder.itemView.score.text = dataList[position].score.toString()
         }
 
@@ -128,13 +137,5 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         playerDiffResult.dispatchUpdatesTo(this)
     }
 
-    fun incScore(position: Int) {
-        dataList[position].score += 1
-    }
-
-    fun decScore(position: Int) {
-        dataList[position].score -= 1
-
-    }
 
 }

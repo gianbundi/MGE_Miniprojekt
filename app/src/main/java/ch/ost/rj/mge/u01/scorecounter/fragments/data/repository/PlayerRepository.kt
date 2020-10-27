@@ -16,14 +16,6 @@ class PlayerRepository(private val playerDao: PlayerDao) {
         playerDao.updateData(playerData)
     }
 
-    suspend fun incScore(playerData: PlayerData) {
-        playerDao.incScore(playerData)
-    }
-
-    suspend fun decScore(playerData: PlayerData) {
-        playerDao.decScore(playerData)
-    }
-
     suspend fun deleteItem(playerData: PlayerData) {
         playerDao.deleteItem(playerData)
     }
