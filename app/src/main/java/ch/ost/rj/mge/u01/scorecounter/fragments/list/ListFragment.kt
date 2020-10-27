@@ -173,7 +173,4 @@ class ListFragment : Fragment() {
         return super.onPrepareOptionsMenu(menu)
     }
 
-
-
-
 }
