@@ -149,6 +149,7 @@ class ListFragment : Fragment() {
     private fun changeTheme() {
         if (darkModeCurrent) {
             darkModeCurrent = false
+
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         } else {
             darkModeCurrent = true

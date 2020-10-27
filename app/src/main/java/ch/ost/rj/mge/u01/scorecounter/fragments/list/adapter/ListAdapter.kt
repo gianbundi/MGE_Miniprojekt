@@ -15,12 +15,10 @@ import ch.ost.rj.mge.u01.scorecounter.fragments.list.ListFragmentDirections
 import kotlinx.android.synthetic.main.row_layout.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
-
     var dataList = emptyList<PlayerData>()
     private lateinit var playerViewModel: PlayerViewModel
     lateinit var inflater: LayoutInflater
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
