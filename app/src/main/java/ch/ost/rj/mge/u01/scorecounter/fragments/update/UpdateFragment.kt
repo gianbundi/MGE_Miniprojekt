@@ -34,6 +34,7 @@ class UpdateFragment : Fragment() {
         view.current_playerName_edit.setText(args.currentItem.name)
         view.current_color_spinner.setSelection(mSharedViewModel.parseColorToInt(args.currentItem.color))
         view.current_color_spinner.onItemSelectedListener = mSharedViewModel.listener
+        view.current_score_edit.setText(args.currentItem.score.toString())
         return view
     }
 
@@ -52,7 +53,7 @@ class UpdateFragment : Fragment() {
     fun updateItem() {
         val name = current_playerName_edit.text.toString()
         val getColor = current_color_spinner.selectedItem.toString()
-        val getScore = args.currentItem.score
+        val getScore = current_score_edit.text.toString().toInt()
 
         val validation = mSharedViewModel.verifyDataFromUser(name)
         if(validation) {

@@ -49,6 +49,12 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
                 ListFragmentDirections.actionListFragmentToUpdateFragment(dataList[position])
             holder.itemView.findNavController().navigate(action)
         }
+        holder.itemView.score.setOnClickListener {
+            val action =
+                ListFragmentDirections.actionListFragmentToUpdateFragment(dataList[position])
+            holder.itemView.findNavController().navigate(action)
+        }
+
 
         val color = dataList[position].color
 

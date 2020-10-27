@@ -119,7 +119,6 @@ class ListFragment : Fragment() {
 
     }
 
-
     private fun getThemeMode() {
         val preference: SharedPreferences = layoutInflater.context.getSharedPreferences(filePath, PRIVATE_MODE)
         themeModePref = preference.getBoolean(DARK_MODE, false)

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ScoreCounter</string>
-    <string name="no_data">No Data</string>
+    <string name="no_data">No Players</string>
     <string name="add_color">Player Color</string>
     <string name="name">Name</string>
     <string name="add">Add</string>
@@ -13,9 +13,7 @@
     <string name="value500">500</string>
     <string name="dark_mode">dark_mode</string>
     <string name="sync_header">Header </string>
-    <string name="reply_title" />
-    <string name="signature_title" />
-    <string name="messages_header" />
+    <string name="player_score">Player Score</string>
 
     <string-array name="colors">
         <item>Red</item>
