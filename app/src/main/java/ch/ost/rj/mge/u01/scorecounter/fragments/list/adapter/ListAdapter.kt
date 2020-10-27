@@ -1,23 +1,17 @@
 package ch.ost.rj.mge.u01.scorecounter.fragments.list.adapter
 
-import android.app.Application
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import ch.ost.rj.mge.u01.scorecounter.MainActivity
 import ch.ost.rj.mge.u01.scorecounter.R
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.models.Color
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.models.PlayerData
 import ch.ost.rj.mge.u01.scorecounter.fragments.data.viewmodel.PlayerViewModel
-import ch.ost.rj.mge.u01.scorecounter.fragments.list.ListFragment
 import ch.ost.rj.mge.u01.scorecounter.fragments.list.ListFragmentDirections
-import ch.ost.rj.mge.u01.scorecounter.fragments.update.UpdateFragment
-import kotlinx.android.synthetic.main.fragment_add.view.*
 import kotlinx.android.synthetic.main.row_layout.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -142,6 +136,5 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         this.dataList = playerData
         playerDiffResult.dispatchUpdatesTo(this)
     }
-
 
 }
